@@ -19,7 +19,7 @@
       --text-dark: #111111;
       --text-light: #E5E5E5;
       --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      --radius: 4px; /* Bords plus carrés pour le style luxe */
+      --radius: 4px;
     }
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.6;color:var(--text-dark);background:var(--light);scroll-behavior:smooth}
@@ -33,9 +33,9 @@
       text-align:center;
       border-bottom: 3px solid var(--gold);
     }
-    .logo{width:120px;height:auto;margin-bottom:24px;filter: brightness(0) invert(1)}
+    /* LOGO PLUS GRAND ICI 👇 */
+    .logo{width:180px;height:auto;margin-bottom:30px;filter: brightness(0) invert(1)}
     
-    /* Utilisation d'une police serif pour le titre principal pour plus d'élégance */
     .hero-name{
       font-family: 'Playfair Display', serif; 
       font-size:2.8rem;font-weight:700;margin-bottom:12px;letter-spacing:0.5px;
@@ -49,11 +49,9 @@
     .cta-buttons{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 36px;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:all 0.3s;cursor:pointer;border:none;font-size:0.95rem;text-transform:uppercase;letter-spacing:1px}
     
-    /* Bouton Gold */
     .btn-primary{background:var(--gold);color:var(--black)}
     .btn-primary:hover{background:var(--gold-hover);transform:translateY(-3px);box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4)}
     
-    /* Bouton Outline */
     .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.3);color:var(--light)}
     .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
     
@@ -66,7 +64,6 @@
       display: inline-block;
       width: 100%;
     }
-    /* Petite ligne dorée sous les titres */
     .section-title::after {
       content: '';
       display: block;
@@ -146,6 +143,7 @@
     .footer-note{margin-top:15px;font-size:1rem;color:var(--gold);font-weight:500;font-style:italic;letter-spacing:1px}
     
     @media(max-width:640px){
+      .logo{width:140px} /* Logo légèrement réduit sur mobile pour rester élégant */
       .hero-name{font-size:2.2rem}
       .section-title{font-size:1.6rem}
       section{padding:60px 0}
